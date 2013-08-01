@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= full_title(yield(:title)) %></title>
+    <meta name="description" content="">
+    <meta name="author" content="MovilBrains">
+    <%= stylesheet_link_tag "application", :media => "all" %>
+    <%= javascript_include_tag "application" %>
+    <!--[if IE 9 ]>
+      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <%= csrf_meta_tags %>
+    <%= yield(:head) %>
+  </head>
+  <body>
+    <header>
+      <%= image_tag("/assets/logo2.png", :alt => "TendenciaZero", :class => "logo")%>
+      <input type="submit" id="btn_login" class="button2 medium gold" value="Iniciar Sesión">
+    </header>
+    <div id="gallery">
+      <ul id="myRoundabout">
+        <li><%= image_tag("banner/banner_01.png", :alt => "")%></li>
+        <li><%= image_tag("banner/banner_02.png", :alt => "")%></li>
+        <li><%= image_tag("banner/banner_03.png", :alt => "")%></li>
+        <li><%= image_tag("banner/banner_04.png", :alt => "")%></li>
+        <li><%= image_tag("banner/banner_05.png", :alt => "")%></li>
+      </ul>         
+    </div>      
+    <div class="menu">
+      <div style="height: 160px;width: 100%; position: relative; left: -60px">        
+        <div style="height: 100%; width: 100%">
+          <ul class="ca-menu">
+            <li>
+              <div>
+                <span class="ca-text">Conocenos</span>
+                <span class="ca-icon">U</span>
+              </div>                    
+            </li>
+            <li>
+              <div>
+                <span class="ca-text">Portafolio</span>
+                <span class="ca-icon">D</span>                  
+              </div> 
+            </li>
+            <li id="btn_galeria">
+              <div>
+                <span class="ca-text">Galeria</span>
+                <span class="ca-icon">I</span>                  
+              </div>      
+            </li>
+            <li id="btn_contacto">
+              <div>
+                <span class="ca-text">Contacto</span>
+                <span class="ca-icon">X</span>                  
+              </div> 
+            </li>
+            <li id="btn_redes">
+              <div>
+                <span class="ca-text">Redes</span>
+                <span class="ca-icon">A</span>                  
+              </div>      
+            </li>
+          </ul>
+        </div>                                
+      </div>
+    </div>
+  </body>
+</html>

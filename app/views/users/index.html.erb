@@ -1,0 +1,25 @@
+<div id="reg_form" class="bg_form">
+  <h1>Listado de usuarios registrados</h1>
+
+  <% @users.each do |user| %>
+    <hr>
+    <div class="user">    
+        <p><%= user.name %></p>
+        <p><%= user.email %></p>        
+        <% if (!user.user_type.nil?) %>
+          <p><%= user.user_type.name %></p>
+        <% end %>
+        <p><%= link_to 'Mostrar', user %>
+          <% if can? :update, User %>
+          - <%= link_to 'Editar', edit_user_path(user) %>
+          <% end %>
+          <% if can? :destroy, User %>
+          - <%= link_to 'Eliminar', user, method: :delete, data: { confirm: '¿Estas seguro?' } %></p>
+          <% end %>
+    </div>
+  <% end %>
+  <hr>
+  <% if can? :create, User %>
+    <%= link_to 'Nuevo usuario', new_user_path, class: "btn btn-primary btn_form" %>
+  <% end %>
+</div>

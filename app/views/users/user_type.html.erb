@@ -1,0 +1,21 @@
+<% provide(:title, @user.name) %>
+<div id="reg_form" class="bg_form">
+	<h1>Cambiar tipo de usuario</h1>
+
+	<div class="row">
+    <div class="span6">
+    	<%= form_for @user, :url => { :action => "update_user_type" } do |f| %>
+    		<%= render 'error_messages' %>
+    		<hr>
+    		<%= f.label :user, "Usuario: #{@user.name}  - #{@user.email}", :class => "label_form" %>
+    		<br>
+		    <%= f.label :user_type, "Tipo de Usuario", :class => "label_form" %>
+		    <%= f.collection_select :user_type_id, UserType.all, :id, :name, {:selected => @user.user_type.id},:class => "select_form" %>
+
+		    <%= f.submit "Guardar", class: "btn btn-primary btn_form"%>
+		  <% end %>
+		  <hr>
+			<%= link_to 'Regresar', @user %>
+		</div>
+  </div>
+</div>

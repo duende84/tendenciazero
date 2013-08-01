@@ -1,0 +1,153 @@
+.button2{
+    font:15px Calibri, Arial, sans-serif;
+    /* A semi-transparent text shadow */
+    text-shadow:1px 1px 0 rgba(200,100,150,0.4);
+    /* Overriding the default underline styling of the links */
+    text-decoration:none !important;
+    white-space:nowrap;
+    display:inline-block;
+    /*    vertical-align:baseline;*/
+    position:relative;
+    cursor:pointer;
+    padding:1px;
+    background-repeat:no-repeat;
+    /* The following two rules are fallbacks, in case
+       the browser does not support multiple backgrounds. */
+    background-position:bottom left;
+    background-image:url('/assets/button_bg.png');
+    /* CSS3 background positioning property with multiple values. The background
+       images themselves are defined in the individual color classes */
+    background-position:bottom left, top right, 0 0, 0 0;
+    background-clip:border-box;
+    /* Applying a default border radius of 8px */
+    -moz-border-radius:18px;
+    -webkit-border-radius:18px;
+    -o-border-radius:18px;
+    -ms-border-radius:18px;
+    border-radius:18px;
+    /* A 1px highlight inside of the button */
+    -moz-box-shadow:0 0 1px #fff inset;
+    -webkit-box-shadow:0 0 1px #fff inset;
+    -o-box-shadow:0 0 1px #fff inset;
+    -ms-box-shadow:0 0 1px #fff inset;
+    box-shadow:0 0 1px #fff inset;
+    /* Animating the background positions with CSS3 */
+    /* Currently works only in Safari/Chrome */
+    -webkit-transition:background-position 1s;
+    -moz-transition:background-position 1s;
+    -o-transition:background-position 1s;
+    -ms-transition:background-position 1s;
+    transition:background-position 1s;
+}
+
+.button2:hover{
+    /* The first rule is a fallback, in case the browser
+       does not support multiple backgrounds
+    */
+    background-position:top left;
+    background-position:top left, bottom right, 0 0, 0 0;
+}
+/* The three buttons sizes */
+
+.button2.big        { font-size:30px;}
+.button2.medium    { font-size:18px;}
+.button2.small    { font-size:13px;}
+
+/* A more rounded button */
+
+.button2.rounded{
+    -moz-border-radius:4em;
+    -webkit-border-radius:4em;
+    -ms-border-radius: 4em;
+    -o-border-radius: 4em;
+    border-radius:4em;
+}
+/* GoldButton*/
+.gold.button2{
+    color:#85592e !important;
+    border: 1px solid #D69E31 !important;        
+    background-image:    url('/assets/button_bg.png'), url('/assets/button_bg.png'),
+        -moz-linear-gradient(top,  rgba(254,231,154,1) 0%, rgba(254,193,81,1) 100%);
+    background-image:    url('/assets/button_bg.png'), url('/assets/button_bg.png'),
+        -webkit-linear-gradient(top,  rgba(254,231,154,1) 0%,rgba(254,193,81,1) 100%);
+    background-image:    url('/assets/button_bg.png'), url('/assets/button_bg.png'),
+        -o-linear-gradient(top,  rgba(254,231,154,1) 0%,rgba(254,193,81,1) 100%);
+    background-image:    url('/assets/button_bg.png'), url('/assets/button_bg.png'),
+        -ms-linear-gradient(top,  rgba(254,231,154,1) 0%,rgba(254,193,81,1) 100%);
+}
+
+.gold.button2:hover{   
+    background-image:    url('/assets/button_bg.png'), url('/assets/button_bg.png'),
+        -moz-linear-gradient(top,  rgba(254,231,154,1) 0%, rgba(254,193,81,1) 100%);
+    background-image:    url('/assets/button_bg.png'), url('/assets/button_bg.png'),
+        -webkit-linear-gradient(top,  rgba(254,231,154,1) 0%,rgba(254,193,81,1) 100%);   
+    background-image:    url('/assets/button_bg.png'), url('/assets/button_bg.png'),
+        -o-linear-gradient(top,  rgba(254,231,154,1) 0%,rgba(254,193,81,1) 100%);   
+    background-image:    url('/assets/button_bg.png'), url('/assets/button_bg.png'),
+        -ms-linear-gradient(top,  rgba(254,231,154,1) 0%,rgba(254,193,81,1) 100%);   
+}
+/* BlueButton  */
+.blue.button2{
+    color:#0f4b6d !important;
+    border:1px solid #84acc3 !important;   
+    background-color: #48b5f2;    
+    background-image:    url('/assets/button_bg.png'), url('/assets/button_bg.png'),
+        -moz-radial-gradient(    center bottom, circle,
+        rgba(89,208,244,1) 0,rgba(89,208,244,0) 100px),
+        -moz-linear-gradient(#4fbbf7, #3faeeb);
+    background-image:    url('/assets/button_bg.png'), url('/assets/button_bg.png'),
+        -webkit-gradient(    radial, 50% 100%, 0, 50% 100%, 100,
+        from(rgba(89,208,244,1)), to(rgba(89,208,244,0))),
+        -webkit-gradient(linear, 0% 0%, 0% 100%, from(#4fbbf7), to(#3faeeb));
+    background-image:    url('/assets/button_bg.png'), url('/assets/button_bg.png'),
+        -o-gradient(    radial, 50% 100%, 0, 50% 100%, 100,
+        from(rgba(89,208,244,1)), to(rgba(89,208,244,0))),
+        -o-gradient(linear, 0% 0%, 0% 100%, from(#4fbbf7), to(#3faeeb));
+    background-image:    url('/assets/button_bg.png'), url('/assets/button_bg.png'),
+        -ms-gradient(    radial, 50% 100%, 0, 50% 100%, 100,
+        from(rgba(89,208,244,1)), to(rgba(89,208,244,0))),
+        -ms-gradient(linear, 0% 0%, 0% 100%, from(#4fbbf7), to(#3faeeb));
+}
+
+.blue.button2:hover{
+    background-color:#63c7fe;
+    background-image:    url('/assets/button_bg.png'), url('/assets/button_bg.png'),
+        -moz-radial-gradient(    center bottom, circle,
+        rgba(109,217,250,1) 0,rgba(109,217,250,0) 100px),
+        -moz-linear-gradient(#63c7fe, #58bef7);
+    background-image:    url('/assets/button_bg.png'), url('/assets/button_bg.png'),
+        -webkit-gradient(    radial, 50% 100%, 0, 50% 100%, 100,
+        from(rgba(109,217,250,1)), to(rgba(109,217,250,0))),
+        -webkit-gradient(linear, 0% 0%, 0% 100%, from(#63c7fe), to(#58bef7));   
+    background-image:    url('/assets/button_bg.png'), url('/assets/button_bg.png'),
+        -o-gradient(    radial, 50% 100%, 0, 50% 100%, 100,
+        from(rgba(109,217,250,1)), to(rgba(109,217,250,0))),
+        -o-gradient(linear, 0% 0%, 0% 100%, from(#63c7fe), to(#58bef7));   
+    background-image:    url('/assets/button_bg.png'), url('/assets/button_bg.png'),
+        -ms-gradient(    radial, 50% 100%, 0, 50% 100%, 100,
+        from(rgba(109,217,250,1)), to(rgba(109,217,250,0))),
+        -ms-gradient(linear, 0% 0%, 0% 100%, from(#63c7fe), to(#58bef7));   
+}
+
+/* Admin buttons  */
+#btnBanner, #btnGaleria, #btnProfile{
+    display: inline-block;
+    margin: 0 70px;
+}
+
+#btnBanner, #btnGaleria, #btnProfile span{
+    position: inherit;
+    font:25px Calibri, Arial, sans-serif;
+    /* A semi-transparent text shadow */
+    text-shadow:1px 1px 0 rgba(200,100,150,0.4);
+    /* Overriding the default underline styling of the links */
+    text-decoration: none !important;       
+    line-height:1.2em;
+    color: #ffffff;
+    padding:1px 0 17px 10px;
+    letter-spacing:-0.5px;
+}
+
+.btnAdmin:hover{
+    cursor: pointer;
+}

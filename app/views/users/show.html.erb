@@ -1,0 +1,25 @@
+<% provide(:title, @user.name) %>
+<div class="row">
+  <div id="reg_form" class="bg_form">
+    <h1>Perfil de usuario</h1>
+      <p>
+      <b>Nombre:</b>
+      <%= @user.name %>
+    </p>
+    <p>
+      <b>Email:</b>
+      <%= @user.email %>
+    </p>    
+    <% if (!@user.user_type.nil?) %>
+      <p>
+        <b>Tipo de usuario:</b>
+        <%= @user.user_type.name %>
+      </p>
+    <% end %>
+    <hr>
+    <% if can? :update, User %>
+    <%= link_to 'Editar Perfil', edit_user_path(@user) %> |
+    <% end %>
+    <%= link_to 'Regresar', users_path %>
+  </div>
+</div>

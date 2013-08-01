@@ -1,0 +1,30 @@
+body {  
+  background-image: linear-gradient(top, rgba(28,28,28,0.9) 0%, rgba(16,16,16,1) 100%);
+  background-image: -webkit-linear-gradient(top, rgba(28,28,28,0.9) 0%, rgba(16,16,16,1) 100%);
+  background-image: -moz-linear-gradient(top, rgba(28,28,28,0.9) 0%, rgba(16,16,16,1) 100%);
+  background-image: -o-linear-gradient(top, rgba(28,28,28,0.9) 0%, rgba(16,16,16,1) 100%);
+  background-image: -ms-linear-gradient(top, rgba(28,28,28,0.9) 0%, rgba(16,16,16,1) 100%);
+  margin:0;
+}
+
+header img{
+  position: relative;
+  display: inline-block;
+  margin-top: 10px;
+  margin-left: 25%;
+}
+
+#btn_login, #btn_logout {
+  position: relative;
+  display:inline-block;
+  
+  /*transform:rotate(45deg);
+  /*-ms-transform:rotate(45deg); /* IE 9 */
+  /*-moz-transform:rotate(45deg); /* Firefox */
+  /*-webkit-transform:rotate(45deg); /* Safari and Chrome */
+  /*-o-transform:rotate(45deg); /* Opera */  
+  width: 130px;
+  height: 35px;
+  top: -60px;
+  margin-left: 50px;
+}
