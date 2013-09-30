@@ -1,10 +1,13 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <b>Name:</b>
-  <%= @user_type.name %>
-</p>
-
-
-<%= link_to 'Edit', edit_user_type_path(@user_type) %> |
-<%= link_to 'Back', user_types_path %>
+<% provide(:title, @user_type.name) %>
+<div class="row">
+  <div id="reg_form" class="bg_form">
+    <h2>Tipo de usuario</h2>
+		<p>
+		  <b>Nombre:</b>
+		  <%= @user_type.name %>
+		</p>
+    <hr>
+    <%= link_to 'Editar', edit_user_type_path(@user_type) %> |
+		<%= link_to 'Regresar', user_types_path %>
+  </div>
+</div>

@@ -1,0 +1,12 @@
+<%= form_for(@gallery) do |f| %>
+  <%= render 'error_messages' %>
+
+  <%= f.label :nombre, :class => "label_form" %>
+  <%= f.text_field :name, :class => "text_field_form", :required => true %>
+
+  <%= f.label :descripcion, :class => "label_form" %>
+  <%= f.text_area :description, :class => "text_field_form", :size => "50x10"  %>
+
+  <%= f.submit "Guardar", class: "btn btn-primary btn_form"%>
+  <hr>
+<% end %>

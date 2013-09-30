@@ -1,23 +1,17 @@
-<h1>Listing user_types</h1>
+<div id="reg_form" class="bg_form">
+  <h2>Listado de Tipos de Usuario</h2>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @user_types.each do |user_type| %>
-  <tr>
-    <td><%= user_type.name %></td>
-    <td><%= link_to 'Show', user_type %></td>
-    <td><%= link_to 'Edit', edit_user_type_path(user_type) %></td>
-    <td><%= link_to 'Destroy', user_type, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-</table>
-
-<br />
-
-<%= link_to 'New User type', new_user_type_path %>
+  <% @user_types.each do |user_type| %>
+    <hr>
+    <div class="user_type">
+      <p><%= user_type.name %></p>
+      <p>
+        <%= link_to 'Mostrar', user_type %> -
+        <%= link_to 'Editar', edit_user_type_path(user_type) %> -
+        <%= link_to 'Eliminar', user_type, method: :delete, data: { confirm: '¿Estas seguro?' } %>
+      </p>
+    </div>
+  <% end %>
+  <hr>
+  <%= link_to 'Nuevo tipo de usuario', new_user_type_path, class: "btn btn-primary btn_form" %>
+</div>

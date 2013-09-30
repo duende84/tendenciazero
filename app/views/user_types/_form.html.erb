@@ -1,21 +1,9 @@
 <%= form_for(@user_type) do |f| %>
-  <% if @user_type.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@user_type.errors.count, "error") %> prohibited this user_type from being saved:</h2>
+  <%= render 'error_messages' %>
 
-      <ul>
-      <% @user_type.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+  <%= f.label :nombre, :class => "label_form" %>
+  <%= f.text_field :name, :class => "text_field_form", :required => true  %>
 
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+  <%= f.submit "Guardar", class: "btn btn-primary btn_form"%>
+  <hr>
 <% end %>

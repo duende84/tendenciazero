@@ -1,0 +1,17 @@
+<% provide(:title, @gallery.name) %>
+<div class="row">
+  <div id="reg_form" class="bg_form">
+    <h2>Galeria de Imagenes</h2>
+		<p>
+		  <b>Nombre:</b>
+		  <%= @gallery.name %>
+		</p>
+		<p>
+		  <b>Descripcion:</b>
+		  <%= @gallery.description %>
+		</p>
+    <hr>
+    <%= link_to 'Editar', edit_gallery_path(@gallery) %> |
+		<%= link_to 'Regresar', galleries_path %>
+  </div>
+</div>

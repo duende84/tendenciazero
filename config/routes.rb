@@ -8,10 +8,11 @@ Tendenciazero::Application.routes.draw do
       put 'update_user_type'
     end
   end
-  
+
   root :to => 'home#index'
 
   resources :user_types
+  resources :galleries, :path => "gallery"
   resources :sessions, only: [:new, :create, :destroy]
 
   match '/signup',  to: 'users#new'

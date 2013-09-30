@@ -1,0 +1,18 @@
+<div id="reg_form" class="bg_form">
+  <h2>Listado de Galerias de Imagenes</h2>
+
+  <% @galleries.each do |gallery| %>
+    <hr>
+    <div class="gallery">
+      <p><%= gallery.name %></p>
+      <p><%= gallery.description %></p>
+      <p>
+        <%= link_to 'Mostrar', gallery %> -
+        <%= link_to 'Editar', edit_gallery_path(gallery) %> -
+        <%= link_to 'Eliminar', gallery, method: :delete, data: { confirm: '¿Estas seguro?' } %>
+      </p>
+    </div>
+  <% end %>
+  <hr>
+  <%= link_to 'Nueva Galeria de Imagenes', new_gallery_path, class: "btn btn-primary btn_form" %>
+</div>
